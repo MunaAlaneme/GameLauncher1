@@ -13,5 +13,6 @@ namespace GameLauncher1
     /// </summary>
     public partial class App : Application
     {
+        // None
     }
 }
