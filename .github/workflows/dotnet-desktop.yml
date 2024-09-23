@@ -89,9 +89,9 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test
-    - name: Workload List
-      run: dotnet workload list
+      run: |
+        dotnet workload list
+        dotnet test
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
