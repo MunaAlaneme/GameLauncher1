@@ -43,15 +43,15 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
-    inputs:
-      chosen-os:
-        required: true
-        type: choice
-        options:
-        - Ubuntu
-        - macOS
-        - Windows
+#  workflow_dispatch:
+#    inputs:
+#      chosen-os:
+#        required: true
+#        type: choice
+#        options:
+#        - Ubuntu
+#        - macOS
+#        - Windows
 
 jobs:
 
@@ -61,7 +61,8 @@ jobs:
       matrix:
         configuration: [Debug, Release]
 
-    runs-on: [self-hosted, "${{ inputs.chosen-os }}"]  # For a list of available runner types, refer to
+    #runs-on: [self-hosted, "${{ inputs.chosen-os }}"]  # For a list of available runner types, refer to
+    runs-on: ubuntu-latest
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
