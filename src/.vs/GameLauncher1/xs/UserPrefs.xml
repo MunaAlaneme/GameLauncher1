@@ -1,13 +1,21 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{2B264D5E-5277-471D-9D93-AE9A5A3D220D}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.xaml.cs">
+    <Files>
+      <File FileName="MainWindow.xaml" Line="1" Column="1" />
+      <File FileName="MainWindow.xaml.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="GameLauncher1" selected="True" />
+          <Node name="GameLauncher1">
+            <Node name="GameLauncher1">
+              <Node name="MainWindow.xaml" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
