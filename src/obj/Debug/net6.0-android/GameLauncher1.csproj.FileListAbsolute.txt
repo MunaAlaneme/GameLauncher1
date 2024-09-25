@@ -1,0 +1,14 @@
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/build.props
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/adb.props
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/GameLauncher1.csproj.AssemblyReference.cache
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/mauiimage.inputs
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/mauifont.inputs
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/mauisplash.inputs
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/resizetizer/sp/drawable-v31/maui_splash_image.xml
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/resizetizer/sp/drawable/maui_splash_image.xml
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/resizetizer/sp/values/maui_colors.xml
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/mauisplash.stamp
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/mauifont.stamp
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/resizetizer/f/OpenSans-Regular.ttf
+/Users/munaalaneme/Documents/GitHub/GameLauncher1/src/obj/Debug/net6.0-android/resizetizer/f/OpenSans-Semibold.ttf

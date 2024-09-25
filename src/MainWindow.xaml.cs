@@ -220,17 +220,20 @@ namespace GameLauncher1
                     if (onlineVersion.IsDifferentThan(localVersion))
                     {
                         InstallGameFiles(true, onlineVersion);
-                    } else
+                    }
+                    else
                     {
                         Status = LauncherStatus.ready;
                     }
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Status = LauncherStatus.failedUp;
                     MessageBox.Show($"Error checking for game updates: {ex}");
 
                 }
-            } else
+            }
+            else
             {
                 InstallGameFiles(false, Version.zero);
             }
@@ -244,12 +247,13 @@ namespace GameLauncher1
                 if (_isUpdate)
                 {
                     Status = LauncherStatus.downloadingUpdate;
-                } else
+                }
+                else
                 {
                     Status = LauncherStatus.downloadingGame;
                     _onlineVersion = new Version(webClient.DownloadString("Version File Link"));
                 }
-                
+
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
                 webClient.DownloadFileAsync(new Uri("Game Zip Link"), gameZip, _onlineVersion);
             }
@@ -323,7 +327,7 @@ namespace GameLauncher1
             internal Version(string _version)
             {
                 string[] _versionStrings = _version.Split('.');
-                if (_versionStrings.Length != 3 )
+                if (_versionStrings.Length != 3)
                 {
                     major = 0;
                     minor = 0;
@@ -341,12 +345,14 @@ namespace GameLauncher1
                 if (major != _otherVersion.major)
                 {
                     return true;
-                } else
+                }
+                else
                 {
                     if (minor != _otherVersion.minor)
                     {
                         return true;
-                    } else
+                    }
+                    else
                     {
                         if (subMinor != _otherVersion.subMinor)
                         {
