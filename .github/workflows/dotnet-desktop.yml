@@ -1,7 +1,7 @@
 name: ci-dotnet-samples
 
 env:
-  ROOT_FOLDER: Gamelauncher1/
+  ROOT_FOLDER: GameLauncher1/
 
 on:
   workflow_dispatch:
