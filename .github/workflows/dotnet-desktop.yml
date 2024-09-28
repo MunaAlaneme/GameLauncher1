@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - "samples/**/*.cs"
+      - "/*.cs"
 
 jobs:
   generate:
@@ -24,7 +24,7 @@ jobs:
       - name: git diff
         uses: technote-space/get-diff-action@v4
         with:
-          PATTERNS: samples/**/*.cs
+          PATTERNS: /*.cs
           ABSOLUTE: true
 
       - name: generate matrix
