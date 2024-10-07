@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{2B264D5E-5277-471D-9D93-AE9A5A3D220D}|Default">
+  <MonoDevelop.Ide.ItemProperties.GameLauncher1 PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../usr/local/share/dotnet/packs/Microsoft.MacCatalyst.Sdk/16.4.60/tools/msbuild/iOS/Xamarin.Shared.targets">
+    <Files>
+      <File FileName="../../../../../usr/local/share/dotnet/packs/Microsoft.MacCatalyst.Sdk/16.4.60/tools/msbuild/iOS/Xamarin.Shared.targets" Line="1738" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameLauncher1" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

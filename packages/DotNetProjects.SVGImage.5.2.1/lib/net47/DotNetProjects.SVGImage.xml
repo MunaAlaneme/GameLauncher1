@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetProjects.SVGImage</name>
+    </assembly>
+    <members>
+        <member name="T:SVGImage.SVG.SVG">
+            <summary>
+            This is the class that reads and parses the XML file.
+            </summary>
+        </member>
+        <member name="T:SVGImage.SVG.SvgIconBase">
+            <summary>
+            This is an <see langword="abstract"/> implementation of a markup extension that enables the creation
+            of <see cref="T:System.Windows.Media.DrawingImage"/> from SVG sources.
+            </summary>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SVGImage.SVG.SvgIconBase"/> 
+            class with the default parameters.
+            </summary>
+        </member>
+        <member name="P:SVGImage.SVG.SvgIconBase.CultureInfo">
+            <summary>
+            Gets or sets the main culture information used for rendering texts.
+            </summary>
+            <value>
+            An instance of the <see cref="P:SVGImage.SVG.SvgIconBase.CultureInfo"/> specifying the main
+            culture information for texts. The default is the English culture.
+            </value>
+            <remarks>
+            <para>
+            This is the culture information passed to the <see cref="T:System.Windows.Media.FormattedText"/>
+            class instance for the text rendering.
+            </para>
+            <para>
+            The library does not currently provide any means of splitting texts
+            into its multi-language parts.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:SVGImage.SVG.SvgIconBase.AppName">
+            <summary>
+            Gets or sets the project or application name of the target assembly.
+            </summary>
+            <value>
+            A string specifying the application project name.
+            </value>
+            <remarks>
+            This is optional and is only used to resolve the resource Uri at the design time.
+            </remarks>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconBase.GetDrawing(System.Uri)">
+            <summary>
+            This converts the SVG resource specified by the Uri to <see cref="T:System.Windows.Media.DrawingGroup"/>.
+            </summary>
+            <param name="svgSource">A <see cref="T:System.Uri"/> specifying the source of the SVG resource.</param>
+            <returns>A <see cref="T:System.Windows.Media.DrawingGroup"/> of the converted SVG resource.</returns>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconBase.GetImage(System.Uri)">
+            <summary>
+            This converts the SVG resource specified by the Uri to <see cref="T:System.Windows.Media.DrawingImage"/>.
+            </summary>
+            <param name="svgSource">A <see cref="T:System.Uri"/> specifying the source of the SVG resource.</param>
+            <returns>A <see cref="T:System.Windows.Media.DrawingImage"/> of the converted SVG resource.</returns>
+            <remarks>
+            This uses the <see cref="M:SVGImage.SVG.SvgIconBase.GetDrawing(System.Uri)"/> method to convert the SVG resource to <see cref="T:System.Windows.Media.DrawingGroup"/>,
+            which is then wrapped in <see cref="T:System.Windows.Media.DrawingImage"/>.
+            </remarks>
+        </member>
+        <member name="T:SVGImage.SVG.SvgIconConverterExtension">
+            <summary>
+            This implements a markup extension that enables the creation
+            of <see cref="T:System.Windows.Media.DrawingImage"/> from SVG sources.
+            </summary>
+            <remarks>
+            The SVG source file can be:
+            <list type="bullet">
+            <item>
+            <description>From the web</description>
+            </item>
+            <item>
+            <description>From the local computer (relative or absolute paths)</description>
+            </item>
+            <item>
+            <description>From the resources.</description>
+            </item>
+            </list>
+            <para>
+            The rendering settings are provided as properties for customizations.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconConverterExtension.#ctor">
+            <overloads>
+            Initializes a new instance of the <see cref="T:SVGImage.SVG.SvgIconConverterExtension"/> class.
+            </overloads>
+            <summary>
+            Initializes a new instance of the <see cref="T:SVGImage.SVG.SvgIconConverterExtension"/> 
+            class with the default parameters.
+            </summary>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconConverterExtension.ProvideValue(System.IServiceProvider)">
+            <summary>
+            Performs the conversion of a valid SVG source file to the 
+            <see cref="T:System.Windows.Media.DrawingImage"/> that is set as the value of the target 
+            property for this markup extension.
+            </summary>
+            <param name="serviceProvider">
+            Object that can provide services for the markup extension.
+            </param>
+            <returns>
+            This returns <see cref="T:System.Windows.Media.DrawingImage"/> if successful; otherwise, it
+            returns <see langword="null"/>.
+            </returns>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconConverterExtension.ResolveUri(System.String)">
+            <summary>
+            Converts the SVG source file to <see cref="T:System.Uri"/>
+            </summary>
+            <param name="inputParameter">
+            Object that can provide services for the markup extension.
+            </param>
+            <returns>
+            Returns the valid <see cref="T:System.Uri"/> of the SVG source path if
+            successful; otherwise, it returns <see langword="null"/>.
+            </returns>
+        </member>
+        <member name="T:SVGImage.SVG.SvgIconExtension">
+            <summary>
+            This implements a markup extension that enables the creation
+            of <see cref="T:System.Windows.Media.DrawingImage"/> from SVG sources.
+            </summary>
+            <remarks>
+            The SVG source file can be:
+            <list type="bullet">
+            <item>
+            <description>From the web</description>
+            </item>
+            <item>
+            <description>From the local computer (relative or absolute paths)</description>
+            </item>
+            <item>
+            <description>From the resources.</description>
+            </item>
+            </list>
+            <para>
+            The rendering settings are provided as properties for customizations.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconExtension.#ctor">
+            <overloads>
+            Initializes a new instance of the <see cref="T:SVGImage.SVG.SvgIconExtension"/> class.
+            </overloads>
+            <summary>
+            Initializes a new instance of the <see cref="T:SVGImage.SVG.SvgIconExtension"/> 
+            class with the default parameters.
+            </summary>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconExtension.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SVGImage.SVG.SvgIconExtension"/> 
+            class with the specified SVG file path.
+            </summary>
+            <param name="svgPath"></param>
+        </member>
+        <member name="P:SVGImage.SVG.SvgIconExtension.Source">
+            <summary>
+            Gets or sets the SVG source file.
+            </summary>
+            <value>
+            A string specifying the path of the SVG source file.
+            The default is <see langword="null"/>.
+            </value>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconExtension.ProvideValue(System.IServiceProvider)">
+            <summary>
+            Performs the conversion of a valid SVG source file to the 
+            <see cref="T:System.Windows.Media.DrawingImage"/> that is set as the value of the target 
+            property for this markup extension.
+            </summary>
+            <param name="serviceProvider">
+            Object that can provide services for the markup extension.
+            </param>
+            <returns>
+            This returns <see cref="T:System.Windows.Media.DrawingImage"/> if successful; otherwise, it
+            returns <see langword="null"/>.
+            </returns>
+        </member>
+        <member name="M:SVGImage.SVG.SvgIconExtension.ResolveUri(System.IServiceProvider)">
+            <summary>
+            Converts the SVG source file to <see cref="T:System.Uri"/>
+            </summary>
+            <param name="serviceProvider">
+            Object that can provide services for the markup extension.
+            </param>
+            <returns>
+            Returns the valid <see cref="T:System.Uri"/> of the SVG source path if
+            successful; otherwise, it returns <see langword="null"/>.
+            </returns>
+        </member>
+        <member name="T:SVGImage.SVG.SVGImage">
+            <summary>
+            This is the SVG image view control. 
+            The image control can either load the image from a file <see cref="M:SVGImage.SVG.SVGImage.SetImage(System.String)"/> or by 
+            setting the <see cref="T:System.Windows.Media.Drawing"/> object through <see cref="M:SVGImage.SVG.SVGImage.SetImage(System.Windows.Media.Drawing)"/>, which allows 
+            multiple controls to share the same drawing instance.
+            </summary>
+        </member>
+        <member name="T:SVGImage.SVG.SVGImage.eSizeType">
+            <summary>
+            This controls how the image is stretched to fill the control,
+            </summary>
+        </member>
+        <member name="F:SVGImage.SVG.SVGImage.eSizeType.None">
+            <summary>
+            The image is not scaled. The image location is translated so the top left corner 
+            of the image bounding box is moved to the top left corner of the image control.
+            </summary>
+        </member>
+        <member name="F:SVGImage.SVG.SVGImage.eSizeType.ContentToSizeNoStretch">
+            <summary>
+            The image is scaled to fit the control without any stretching. 
+            Either X or Y direction will be scaled to fill the entire width or height.
+            </summary>
+        </member>
+        <member name="F:SVGImage.SVG.SVGImage.eSizeType.ContentToSizeStretch">
+            <summary>
+            The image will be stretched to fill the entire width and height.
+            </summary>
+        </member>
+        <member name="F:SVGImage.SVG.SVGImage.eSizeType.SizeToContent">
+            <summary>
+            The control will be resized to fit the un-scaled image. If the image is larger than the 
+            maximum size for the control, the control is set to maximum size and the image is scaled.
+            </summary>
+        </member>
+        <member name="F:SVGImage.SVG.SVGImage.eSizeType.ViewBoxToSizeNoStretch">
+            <summary>
+            Not the content of the image but its viewbox is scaled to fit the control without any stretching.
+            Either X or Y direction will be scaled to fill the entire width or height.
+            </summary>
+        </member>
+        <member name="F:SVGImage.SVG.SVGImage.UriSourceProperty">
+            <summary>
+            Identifies the <see cref="P:SVGImage.SVG.SVGImage.UriSource"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:SVGImage.SVG.SVGImage.UriSource">
+            <summary>
+            Gets or sets the path to the SVG file to load into this <see cref="T:System.Windows.Controls.Canvas"/>.
+            </summary>
+            <value>
+            A <see cref="T:System.Uri"/> specifying the path to the SVG source file.
+            The file can be located on a computer, network or assembly resources.
+            Settings this to <see langword="null"/> will close any opened diagram.
+            </value>
+            <remarks>
+            This is the same as the <see cref="P:SVGImage.SVG.SVGImage.Source"/> property, and added for consistency.
+            </remarks>
+            <seealso cref="P:SVGImage.SVG.SVGImage.UriSource"/>
+        </member>
+        <member name="P:SVGImage.SVG.SVGImage.BaseUri">
+            <summary>
+            Gets or sets the base URI of the current application context.
+            </summary>
+            <value>
+            The base URI of the application context.
+            </value>
+        </member>
+        <member name="M:SVGImage.SVG.SVGImage.LoadDrawing(System.Uri)">
+            <summary>
+            This converts the SVG resource specified by the Uri to <see cref="T:System.Windows.Media.DrawingGroup"/>.
+            </summary>
+            <param name="svgSource">A <see cref="T:System.Uri"/> specifying the source of the SVG resource.</param>
+            <returns>A <see cref="T:System.Windows.Media.DrawingGroup"/> of the converted SVG resource.</returns>
+        </member>
+        <member name="T:SVGImage.SVG.SVGRender">
+            <summary>
+            This is the class that creates the WPF Drawing object based on the information from the <see cref="P:SVGImage.SVG.SVGRender.SVG"/> class.
+            </summary>
+            <seealso href="http://www.w3.org/TR/SVGTiny12/"/>
+            <seealso href="http://commons.oreilly.com/wiki/index.php/SVG_Essentials"/>
+        </member>
+        <member name="T:SVGImage.SVG.Utils.PathUtils">
+            <summary>
+            Extends functionality of <see cref="T:System.IO.Path"/> and provides additional methods for manipulating file or directory path information.
+            </summary>
+        </member>
+        <member name="M:SVGImage.SVG.Utils.PathUtils.Combine(System.Reflection.Assembly,System.String[])">
+            <summary>
+            Combines an assembly location and an array of strings into a path.
+            </summary>
+            <param name="assembly">An <see cref="T:System.Reflection.Assembly"/> which is taken as the base path.</param>
+            <param name="paths">Path segments which are appended to the assembly location.</param>
+            <returns>A string containing the combined path.</returns>
+        </member>
+        <member name="M:SVGImage.SVG.Utils.PathUtils.GetAssemblyPath(System.Reflection.Assembly)">
+            <summary>
+            Gets the full path to the assembly file.
+            </summary>
+            <param name="assembly">An <see cref="T:System.Reflection.Assembly"/> which is taken as the base path.</param>
+            <returns>A string containing the full path to the assembly file.</returns>
+        </member>
+        <member name="M:SVGImage.SVG.Utils.PathUtils.GetAssemblyFileName(System.Reflection.Assembly)">
+            <summary>
+            Gets the file name if the assembly.
+            </summary>
+            <param name="assembly">An <see cref="T:System.Reflection.Assembly"/> which is taken as the base path.</param>
+            <returns>A string containing the file name of the assembly.</returns>
+        </member>
+        <member name="M:SVGImage.SVG.Utils.PathUtils.CombineInternal(System.String,System.String[])">
+            <summary>
+            Exposes <see cref="M:SVGImage.SVG.Utils.PathUtils.Combine(System.Reflection.Assembly,System.String[])"/> for unit-testing where it is possible to mock an empty location
+            </summary>
+        </member>
+        <member name="M:SVGImage.SVG.Utils.PathUtils.GetAssemblyPathInternal(System.Reflection.Assembly,System.String)">
+            <summary>
+            Exposes <see cref="M:SVGImage.SVG.Utils.PathUtils.GetAssemblyPath(System.Reflection.Assembly)"/> for unit-testing where it is possible to mock an empty location
+            </summary>
+        </member>
+    </members>
+</doc>

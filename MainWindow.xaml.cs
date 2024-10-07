@@ -229,7 +229,7 @@ namespace GameLauncher1
                 catch (Exception ex)
                 {
                     Status = LauncherStatus.failedUp;
-                    MessageBox.Show($"Error checking for game updates: {ex}");
+                    System.Windows.MessageBox.Show($"Error checking for game updates: {ex}");
 
                 }
             }
@@ -260,7 +260,7 @@ namespace GameLauncher1
             catch (Exception ex)
             {
                 Status = LauncherStatus.failedIn;
-                MessageBox.Show($"Error installing game files: {ex}");
+                System.Windows.MessageBox.Show($"Error installing game files: {ex}");
             }
         }
 
@@ -297,14 +297,14 @@ namespace GameLauncher1
             catch (Exception ex)
             {
                 Status = LauncherStatus.failedDown;
-                MessageBox.Show($"Error finishing download: {ex}");
+                System.Windows.MessageBox.Show($"Error finishing download: {ex}");
             }
         }
 
 
         private void Exit(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void Minimize(object sender, RoutedEventArgs e)
